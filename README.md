@@ -4,7 +4,7 @@
 
 #### 1. Taille du texte
 
-Préférez les tailles relatives, en `rem` plutôt qu'en `px`
+Préférer les tailles relatives, en `rem` plutôt qu'en `px`
 
 #### 2. Vérifier le ratio
 
@@ -16,7 +16,7 @@ Préférez les tailles relatives, en `rem` plutôt qu'en `px`
 #### 3. Libélés explicites des liens
 
 - Les `title` des `<a>` -> Ex un bouton avec écrit "accès à votre suivi de commande"
-- Les logiciels de revue d'écran lisent le `aria-label` ou le `title` et parfois les 2 selon la configuration du logiciel. Mettre le title seulement s'il apporte une information complémentaire et non redondante avec le libellé
+- Les logiciels de revue d'écran lisent le `aria-label` ou le `title` et parfois les 2 selon la configuration du logiciel. Mettre le `title` seulement s'il apporte une information complémentaire et non redondante avec le libellé
 
 #### 4. Text alternatif
 
@@ -24,10 +24,10 @@ Préférez les tailles relatives, en `rem` plutôt qu'en `px`
 
 #### 5. Alternative aux éléments sonores
 
-- Utilisez <track> pour intégrer des sous-titres synchronisés aux vidéo via des fichiers [WebVTT](http://edutechwiki.unige.ch/fr/WebVTT) -> supportent plusieurs langues
-- Appliquez des styles via CSS externe
+- Utiliser <track> pour intégrer des sous-titres synchronisés aux vidéos via des fichiers [WebVTT](http://edutechwiki.unige.ch/fr/WebVTT) -> supportent plusieurs langues
+- Appliquer des styles via CSS externe
 
-#### 6. Ouverture dans une nouvelle fenetre
+#### 6. Ouverture dans une nouvelle fenêtre
 
 Rendre explicite l'ouverture dans le title
 
@@ -42,7 +42,7 @@ et s'il y a un mot en anglais ajouter un `<span lang="en">Hello World !</span>`
 
 #### 8. Roles
 
-Définir les rôles des pages pour les lecteurs d'écran, plus spécifiquement les Blocks sémantiques, en limitant le nombre de découpage en DIV inutiles
+Définir les rôles des pages pour les lecteurs d'écran, plus spécifiquement les blocks sémantiques, en limitant le nombre de découpage en DIV inutiles
 
 ```txt
 role="banner" - dans header
@@ -71,9 +71,9 @@ Ex1 :
 
 #### 10. Gérer les éléments non pertinents avec aria-hidden
 
-`aria-hidden="true"` évite de vocaliser éléments décoratifs
+`aria-hidden="true"` évite de vocaliser les éléments décoratifs
 
-Ex : L'icône `&times;` (une croix) est uniquement décorative. Si elle était vocalisée, elle ajouterait une redondance : "Croix Fermer, bouton", ce qui peut prêter à confusion
+Ex : L'icône `&times;` (une croix) est uniquement décorative. Si elle était vocalisée, elle ajouterait une redondance ("Croix Fermer, bouton"), qui prête à confusion
 
 ```html
 <button aria-label="Fermer">
@@ -84,7 +84,7 @@ Ex : L'icône `&times;` (une croix) est uniquement décorative. Si elle était v
 #### 11. Les aria-label des éléments interactifs
 
 - Description plus précise de l'action
-- les `alt=""` des images sont vides, car les logos (Visa, MasterCard, PayPal) sont purement décoratifs
+- Les `alt=""` des images sont vides, car les logos (Visa, MasterCard, PayPal) sont purement décoratifs
 
 ```html
 <button aria-label="payer avec Visa">
@@ -104,8 +104,7 @@ Ex : L'icône `&times;` (une croix) est uniquement décorative. Si elle était v
 
 #### 12. Rendre accessible un message d'alerte
 
-`aria-live="polite"` = Le lecteur va attendre la fin de l'action  
-Ici, le lecteur va restituer :  
+`aria-live="polite"` = Le lecteur va attendre la fin de l'action. Ici, le lecteur va restituer :    
 "Alert, Attention le formulaire n'est pas validé, Fermer la notification, buton"
 
 ```html
@@ -135,7 +134,7 @@ Ici, le lecteur va restituer :
 - `touche Tab` : possibilité de pouvoir passer d'un élément à un autre
 - `touche entrée` : la validation d'un lien fonctionne bien
 - `flèches` : se déplacer de page en page
-- Des accès rapide grâce à l'attribut `accesskey`  
+- Des accès rapides grâce à l'attribut `accesskey`  
   Ex: `<a href="contact.html" accesskey="t">Contact</a>`
 
 #### 15. Zoom à 200%
@@ -147,17 +146,21 @@ Garder le contenu sans l'altérer avec un zoom jusqu'à 200%
 Vérifier que si on passe le site en noir et blanc ça n'altère pas l'information
 
 #### 17. Politique d'accessibilité 
+
 Permet d'expliquer toutes les spécificités d'utilisation du site.
-Pour ce point beaucoup de sites prévoient des fichiers audios permettant d'expliquer la disposition et la navigation. Et résumer tout ou partie du contenu.
+Pour ce point beaucoup de sites prévoient des fichiers audios permettant d'expliquer la disposition et la navigation. Pour résumer tout ou partie du contenu.
 
 #### 18. Passer le site dans des validateurs
+
 -> https://achecker.ca/checker/index.php
 
 #### 19. Tester son site
 
 Avec des logiciels de revue d'écrans, il en existe des gratuits comme le narrateur nativement présent dans Windows 10 ou NVDA petit logiciel a télécharger ou des alternatives payantes.
 
-#### 20. Moteurs de recherches spécialisés ? Inscription sur des sites annuaires ?
+#### 20. Moteurs de recherches spécialisés
+
+Inscription du sites sur des annuaires
 
 #### 21. Attentions aux animations et aux éléments cachés
 
@@ -166,15 +169,12 @@ Un menu déroulant par exemple n'est pas du tout une solution d'accessibilité a
 ### Sources
 
 #### Accessibilité mal voyants
+
 - [Logiciels de revue d'écrans](https://www.ionos.fr/digitalguide/sites-internet/developpement-web/lecteurs-decran-logiciels-pour-malvoyants-et-non-voyants/)
-
 - [NVDA](https://www.nvda-fr.org/)
-
 - [Accessibilité recommandation WCAG](https://www.ionos.fr/digitalguide/sites-internet/developpement-web/accessibilite-sur-le-web-wcag-les-lignes-directrices/)
-
 - [Aria](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
 - [Utilisation de l'aria](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
-
 
 #### Accessibilité mal entendants
 
